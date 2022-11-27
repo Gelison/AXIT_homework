@@ -1,0 +1,105 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: black;
+  text-align: left;
+}
+
+.tabs {
+  font-size: 0;
+  max-width: 1170px;
+  margin-left: 170px;
+  margin-right: 170px;
+}
+
+.tabs > input[type="radio"] {
+  display: none;
+}
+
+.tabs > div {
+  /* скрыть контент по умолчанию */
+  display: none;
+  border: 1px solid #e0e0e0;
+
+  font-size: 16px;
+}
+
+/* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
+#tab-btn-1:checked ~ #content-1,
+#tab-btn-2:checked ~ #content-2,
+#tab-btn-3:checked ~ #content-3 {
+  display: flex;
+}
+
+.tabs > label {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  padding: 2px 8px;
+  font-size: 16px;
+  line-height: 1.5;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  top: 1px;
+}
+
+.tabs > label:not(:first-of-type) {
+  border-left: none;
+}
+
+.tabs > input[type="radio"]:checked + label {
+  background-color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tab__text {
+  width: 65%;
+  padding: 10px 15px;
+}
+
+.tab__img {
+  width: 35%;
+}
+.tab__img_inner {
+  width: 100%;
+  height: 100%;
+}
+
+.button {
+  display: inline-block; /* строчно-блочный */
+  margin-top: 30px; /*отступы от края браузера */
+  padding: 15px 100px; /*  расстояние от текста до края кнопки */
+  background-color: #ec7979; /* цвет кнопки */
+  /* box-shadow: 0px 6px #f7f8e8; задана тень */
+  /* border-radius: 5px; скругление углов */
+  font-size: 18px; /* размер шрифта */
+  /* text-transform: uppercase; трансформировать в заглавные буквы */
+  text-decoration: none; /* не подчеркивать ссылку */
+  /* transition: 0.2s; плавный ховер эффект */
+  color: white; /* цвет текста на кнопке */
+}
