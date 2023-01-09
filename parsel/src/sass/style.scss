@@ -3,10 +3,6 @@
 *::after {
   box-sizing: border-box;
 }
-/* li, ul {
-  
-  border-bottom: 1px grey;
-} */
 
 h3,
 h4,
@@ -18,6 +14,50 @@ body {
   margin: 0;
   font-family: 'Open Sans', 'Raleway', sans-serif;
   text-align: left;
+}
+
+nav {
+  a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 30px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
+.navbar {
+  position: fixed !important;
+  width: 100%;
+  z-index: 1000;
+  padding: 0 !important;
+}
+
+.navbar__content {
+  width: 100%;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 75px;
+  padding: 0 115px;
+}
+.navbar__content .navbar__items {
+  height: inherit;
+  display: flex;
+  align-self: center;
+}
+.navbar__title {
+}
+
+.header {
+  height: 100vh;
+  background: url('../img/header__bg.png') no-repeat;
+  background-color: #ec7979;
+  background-size: cover;
 }
 
 .tabs {
@@ -118,16 +158,12 @@ body {
 }
 
 .button {
-  display: inline-block; /* строчно-блочный */
-  padding: 15px 100px; /*  расстояние от текста до края кнопки */
-  background-color: #ec7979; /* цвет кнопки */
-  /* box-shadow: 0px 6px #f7f8e8; задана тень */
-  /* border-radius: 5px; скругление углов */
-  font-size: 18px; /* размер шрифта */
-  /* text-transform: uppercase; трансформировать в заглавные буквы */
-  text-decoration: none; /* не подчеркивать ссылку */
-  /* transition: 0.2s; плавный ховер эффект */
-  color: white; /* цвет текста на кнопке */
+  display: inline-block;
+  padding: 15px 100px;
+  background-color: #ec7979;
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
   margin-top: 10px;
 }
 .adventures {
@@ -375,6 +411,43 @@ body {
   color: white;
   margin-top: 10px;
 }
+.cotanct__form {
+  width: 1170px;
+  padding: 125px 170px 50px 170px;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 14px;
+  color: #bdbdbd;
+}
+.form__group {
+  position: relative;
+  margin-bottom: 85px;
+}
+.form__label {
+  float: left;
+  top: 1;
+  transition: 0.3s;
+}
+.form__input {
+  width: 100%;
+  padding: 0 0 10px 0;
+  border: none;
+  border-bottom: 2px solid #bdbdbd;
+  background-color: transparent;
+  outline: none;
+  transition: 0.3s;
+}
+.form__button {
+  display: flex;
+  padding: 15px 100px;
+  background-color: #ec7979;
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  margin-top: 10px;
+  border: none;
+}
+
 footer {
   background-color: #333;
   text-align: center;
